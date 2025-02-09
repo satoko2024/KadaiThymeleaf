@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>入力画面</title>
+    <title th:text="${title}"></title>
 </head>
 <body>
-    <h1>Thymeleaf課題</h1>
-    <h2>入力画面</h2>
-    <p>値を入力してください。</p>
+    <h1 th:text="${title}"></h1>
+    <h2 th:text="${inputTitle}"></h2>
+    <p th:text="${inputMessage}"></p>
     <form action="/output" method="post">
         <input type="text" name="value" />
         <button type="submit">送信</button>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>出力画面</title>
+    <title th:text="${title}"></title>
 </head>
 <body>
-    <h1>Thymeleaf課題</h1>
-    <h2>出力画面</h2>
-    <p>入力された値は「<span th:text="${value}"></span>」です</p>
-    <a th:href="@{/input(previous=${value})}">入力画面へ戻る</a>
+    <h1 th:text="${title}"></h1>
+    <h2 th:text="${outputTitle}"></h2>
+    <p th:text="${outputMessage} + ' ' + ${value}"></p>
+    <a th:href="@{/input(previous=${value})}" th:text="${backLink}"></a>
 </body>
 </html>
